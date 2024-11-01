@@ -11,13 +11,14 @@
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navlist {
     display: flex;
     position: fixed;
     height: 15vh;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -77,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .icons .fa-brands {
@@ -186,6 +187,34 @@
     width: 28rem;
 }
 
+/* Responsive design for medium screens */
+@media (max-width: 1024px) {
+    .left-container, .right-container {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .content {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .btn-container button {
+        padding: 0.7rem 1.3rem;
+        font-size: 1rem;
+    }
+
+    .icons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .portfolio-container {
@@ -202,11 +231,47 @@
 
     .btn-container button {
         padding: 0.5rem 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .icons {
         flex-direction: row;
         gap: 1rem;
+    }
+
+    .design .circle {
+        width: 18rem;
+    }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+    .navlist {
+        gap: 1rem;
+    }
+
+    .navlist li a {
+        font-size: 0.8rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content .detail {
+        font-size: 1rem;
+    }
+
+    .btn-container button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .icons .fa-brands {
+        font-size: 1.2rem;
+    }
+
+    .design .circle {
+        width: 14rem;
     }
 }
